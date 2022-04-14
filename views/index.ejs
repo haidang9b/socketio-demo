@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="javascripts/main.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <title>Socket.IO chat</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <div id="ctnLeft">
+        <button id="btnChatKenhTheGioi" onclick=joinChatKenhTheGioi()>Kênh thế giới</button>
+        <input type="text" id="txtRoom">
+        <button id="btnCreateRoom">Tham gia</button>
+        <p id="msgNotifyCreateRoom" style="display: none; color: red;"></p>
+        <p>Danh sách người dùng trực tuyến</p>
+        <ul id="listUsersOnline">
+
+        </ul>
+        <p>Danh sách Room hiện có</p>
+        <ul id="listRoom">
+
+        </ul>
+      </div>
+      <div id="ctnRight">
+        <h1 id="labelCurrentRoomName">Kênh thế giới</h1>
+        <p id="thisUsername"></p>
+        <br>
+        <ul id="messages" class="list-group"> 
+        </ul>
+        <form id="formChat" action="">
+          <input id="txtInput" autocomplete="off" />
+          <button type="submit" id="btnSendData">Send</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+  <script src="javascripts/handleButton.js"> </script>
+</html>
